@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\xampp\htdocs\schoolproject2\config.php';
+require_once 'Config.php';
 
 class Database {
 

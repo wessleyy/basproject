@@ -1,20 +1,22 @@
 <?php 
 
-include "klant.php";
+#include "klant.php";
+require_once 'config.php';
+
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "boodschappenservice";
 
-$database = new Database($servername, $username, $password, $dbname);
-$database->connect();
+$database = new klant($servername, $username, $password, $dbname);
+ $database->connect();
 
 $klantnaam = "jan";
 $klantemail = "palemal@boo";
 $klantadres = "spijkenisse";
 
-$database->insertCustomer($klantnaam, $klantemail, $klantadres);
+$database->insertklant($klantnaam, $klantemail, $klantadres, 123, 123);
 
 $database->close();
 
